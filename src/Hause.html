@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Domcek</title>
+
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/print.css"/>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200" height="100"
+    style="border:1px #c3c3c3;">
+    Your browser does not support the canvas element.
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(50,50,100,50);
+
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(60,70,20,70);
+
+        ctx.fillStyle = "#0000FF";
+        ctx.fillRect(90,70,20,20);
+
+        ctx.fillStyle = "#0000FF";
+        ctx.fillRect(120,70,20,20);
+
+        ctx.fillStyle = "#9B4600";
+        ctx.moveTo(50, 50); // zaciatok v lavom hornom rohu platna
+        ctx.lineTo(150, 50); // chod 150px do prava (x), rovnou ciarou
+        ctx.lineTo(100, 20); // chod horizontalne 100 (x) a vertikalne 200 (y)
+        ctx.fill(); // connect and fill
+    </script>
+</body>
+</html>
